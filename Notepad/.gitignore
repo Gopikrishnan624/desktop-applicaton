@@ -1,6 +1,7 @@
 node_modules/
 dist/
 release/
+!release/*.exe
 dist-electron/
 .DS_Store
 .env
