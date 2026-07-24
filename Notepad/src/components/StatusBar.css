@@ -1,0 +1,50 @@
+.statusbar {
+  display: flex;
+  height: 22px;
+  background-color: var(--accent-color);
+  color: #ffffff; /* Typically white on accent backgrounds, or use a specific variable */
+  align-items: center;
+  padding: 0 10px;
+  font-size: 11px;
+  user-select: none;
+}
+
+.statusbar-item {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 100%;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.statusbar-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.statusbar-spacer {
+  flex: 1;
+}
+
+.editor-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+}
+
+.empty-logo {
+  font-size: 32px;
+  font-weight: bold;
+  opacity: 0.1;
+  margin-bottom: 20px;
+}
+
+.empty-shortcut {
+  font-size: 13px;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}

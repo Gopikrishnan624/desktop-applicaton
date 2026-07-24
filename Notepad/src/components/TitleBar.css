@@ -1,0 +1,81 @@
+.titlebar {
+  display: flex;
+  height: 32px;
+  background-color: var(--titlebar-bg);
+  align-items: center;
+  user-select: none;
+  font-size: 13px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.titlebar-drag-region {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 140px); /* Leave space for controls */
+  height: 32px;
+  -webkit-app-region: drag;
+  z-index: 1;
+}
+
+.titlebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 100%;
+  color: var(--accent-color);
+  z-index: 2;
+}
+
+.titlebar-menu {
+  display: flex;
+  z-index: 2;
+  -webkit-app-region: no-drag;
+}
+
+.menu-item {
+  padding: 0 10px;
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.titlebar-title {
+  flex: 1;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.titlebar-controls {
+  display: flex;
+  height: 100%;
+  -webkit-app-region: no-drag;
+  z-index: 2;
+}
+
+.control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 100%;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.control-button:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.control-button.close:hover {
+  background-color: var(--danger);
+  color: white;
+}

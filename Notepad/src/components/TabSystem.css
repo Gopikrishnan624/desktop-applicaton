@@ -1,0 +1,94 @@
+.tab-system {
+  display: flex;
+  background-color: var(--bg-secondary);
+  height: 36px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.tabs-container {
+  display: flex;
+  height: 100%;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  max-width: 200px;
+  height: 100%;
+  padding: 0 10px;
+  background-color: var(--tab-inactive-bg);
+  border-right: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-top: 2px solid transparent;
+}
+
+.tab:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.tab.active {
+  background-color: var(--tab-active-bg);
+  color: var(--text-primary);
+  border-top: 2px solid var(--accent-color);
+}
+
+.tab-name {
+  flex: 1;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 8px;
+}
+
+.tab-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.tab-unsaved-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+}
+
+.tab-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.tab:hover .tab-close, .tab.active .tab-close {
+  opacity: 1;
+}
+
+.tab-close:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.tab.active .tab-close:hover {
+  background-color: var(--bg-secondary);
+}
+
+.tab-unsaved-dot + .tab-close {
+  display: none;
+}
+
+.tab:hover .tab-unsaved-dot + .tab-close {
+  display: flex;
+}
+
+.tab:hover .tab-unsaved-dot {
+  display: none;
+}
